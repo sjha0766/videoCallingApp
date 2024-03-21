@@ -10,6 +10,7 @@ function Rooms() {
     // Generate Kit Token
    const appID = import.meta.env.VITE_APP_ID;
       const serverSecret = import.meta.env.VITE_SERVER_SECRET;
+      const URL=import.meta.env.VITE_URL;
     const kitToken = ZegoUIKitPrebuilt.generateKitTokenForTest(
       parseInt(appID),
       serverSecret,
@@ -27,7 +28,7 @@ function Rooms() {
       sharedLinks: [
         {
           name: "shareLink",
-          url: `http://localhost:5173/room/${roomId}`,
+          url: URL!=null?URL:`http://localhost:5173/room/${roomId}`,
         },
       ],
 
