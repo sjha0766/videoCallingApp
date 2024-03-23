@@ -28,7 +28,7 @@ function Rooms() {
       sharedLinks: [
         {
           name: "shareLink",
-          url: URL || `http://localhost:5173/room/${roomId}`,
+          url:  `http://localhost:5173/room/${roomId}`,
         },
       ],
 
